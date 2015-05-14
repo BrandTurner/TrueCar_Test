@@ -1,0 +1,110 @@
+/* Reet
+-------------------------------------------------- */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body { margin: 0; }
+
+.mainContainer, header { position: relative; margin: .5em; }
+
+.leftColumn, .rightColumn, header { padding: 1.25em;}
+
+.leftColumn {
+  margin-bottom: .5em;
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 70%, rgba(230,230,230,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(70%, rgba(246,246,246,1)), color-stop(100%, rgba(230,230,230,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 70%, rgba(230,230,230,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 70%, rgba(230,230,230,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 70%, rgba(230,230,230,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 70%, rgba(230,230,230,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0 );
+}
+
+.leftColumn > label {
+  
+}
+
+.rightColumn {
+
+}
+
+.rightColumn > ol {
+  list-style-type: none;
+}
+
+ol {
+    list-style-type: none;
+    border: solid 1px #dddddd;
+    border-width: 1px 0;
+    counter-reset: blackNumbers;
+}
+
+ol li {
+    color: #ff7f00;
+    font-family: 'Georgia';
+    margin: 1px auto;
+    min-height: 28px;
+    padding: 12px 2px 0px 45px;
+    border: dashed 1px #dddddd;
+    border-width: 0 0 1px 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+ol li span {
+    word-wrap: break-word;
+    width: 85%;
+    display: inline-block;
+}
+
+ol li:last-child {
+    border-width: 0;
+}
+
+ol li:before {
+    position: absolute;
+    margin-left: -44px;
+    margin-top: -12px;
+    height: 16px;
+    content: counter(blackNumbers) ".";
+    counter-increment: blackNumbers;
+    color: #000000;
+    padding: 14px 8px 10px 10px;
+    background: rgba(255,255,255,1);
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(255,250,232,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(255,250,232,1) 100%);
+}
+
+ol li a {
+    float: right;
+    margin-right: 5px;
+    color: #4e9ee0;
+    font-family: 'Arial';
+    font-size: 12px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+/* Media Queries
+-------------------------------------------------- */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this should be the default */
+
+/* Small devices (tablets, 768px and up) */
+
+@media screen and (min-width: 40.5em ) {
+  .leftColumn{width:18.75em;}
+  .rightColumn{position:absolute;top:0;right:0;width:18.75em;}
+}
+
+
+
+

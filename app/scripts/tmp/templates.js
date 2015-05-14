@@ -1,0 +1,1 @@
+window.TrueCarTest = window.TrueCarTest || {}; window.TrueCarTest.Templates = window.TrueCarTest.Templates || {};

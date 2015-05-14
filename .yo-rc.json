@@ -1,0 +1,17 @@
+{
+  "generator-telescope-app": {
+    "appName": "TrueCarTest",
+    "appPath": "app",
+    "facebookId": "444172322357134",
+    "widgetId": "data/data.json",
+    "gaId": "UA-XXXXX-X",
+    "homepageUrl": "http://telescope.tv",
+    "gitUrl": "http://10.10.10.43:7990/projects/C_APP/repos/",
+    "testFramework": "mocha",
+    "templateFramework": "lodash",
+    "includeBootstrap": false,
+    "includeSass": false,
+    "includeRubySass": true,
+    "includeCryptoJS": false
+  }
+}

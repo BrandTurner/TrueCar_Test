@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>TrueCar Homework Assignment</title>
+        <meta name="description" content="Yeoman generator">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <meta name="author" content="BrandTurner, Inc.">
+
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="image_src" href="images/default-icons/app-icon.png">
+
+        <meta property="og:title" content="TrueCarTest">
+        <meta property="og:description" content="Yeoman generator">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="images/default-icons/app-icon.png">
+        <meta property="fb:app_id" content="444172322357134">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(app) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <a href="http://truecar.com" target="_blank">
+                <img alt="TrueCar Logo" src="images/logo.png" />
+            </a>
+        </header>
+        <main>
+            <div class="mainContainer">
+                <div class="leftColumn">
+                    <div>
+                        <label>Add Item:</label> 
+                        <input type = "text" id="add_item"/>
+                        <button>Add &#9654;</button>
+                    </div>
+                    <div>
+                        <label>JSON:</label>
+                        <textarea id="add_item_textarea"></textarea>
+                    </div>
+                    <div>
+                        <label>&nbsp;</label>
+                        <button>Load JSON</button>
+                    </div>
+                </div>
+                <div class="rightColumn">
+                    <h4>Items</h4>
+                    <ol>
+                        <li>Item one <a>delete</a></li> 
+                        <li>Item one <a>delete</a></li> 
+                        <li>Item one <a>delete</a></li> 
+                    </ol>
+                </div>
+            </div>
+        </main>
+
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
