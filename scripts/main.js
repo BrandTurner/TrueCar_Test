@@ -61,7 +61,7 @@
       var val = parseFloat(el.style.opacity);
       if ((val += 0.1) < 1) {
         el.style.opacity = val;
-        //requestAnimationFrame(fade);
+        requestAnimationFrame(fade);
       }
     })();
   }
