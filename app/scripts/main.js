@@ -8,9 +8,9 @@
       if (element.addEventListener) {
         element.addEventListener(event, handler);
       } else if (element.attachEvent) {
-        element.attachEvent("on" + event, handler);
+        element.attachEvent('on' + event, handler);
       } else {
-        element["on" + type] = handler;
+        element['on' + event] = handler;
       }
     },
 
@@ -21,7 +21,7 @@
     getTarget: function(event) {
       return event.target || event.srcElement;
     }
-  }
+  };
 
     // Gets the index of li element in an ol or ul
   function getNodeIndex(node) {
@@ -40,7 +40,7 @@
 
   function addToList(item) {
     if (!item.value) {
-      alert("The field is empty. Please input a value to add");
+      window.alert('The field is empty. Please input a value to add');
       return;
     }
 
@@ -56,13 +56,13 @@
 
   function fadeIn(el, display){
     el.style.opacity = 0;
-    el.style.display = display || "block";
+    el.style.display = display || 'block';
 
     (function fade() {
       var val = parseFloat(el.style.opacity);
-      if (!((val += .1) > 1)) {
+      if ((val += 0.1) < 1) {
         el.style.opacity = val;
-        requestAnimationFrame(fade);
+        //requestAnimationFrame(fade);
       }
     })();
   }
@@ -106,21 +106,21 @@
     try {
       itemListArr = JSON.parse(jsonItems.value);
     } catch(e) {
-      alert("The JSON inputted is invalid. Please enter a valid JSON String")
+      window.alert('The JSON inputted is invalid. Please enter a valid JSON String');
     }
     updateListByJSON();
   }
 
   function fadeOutItem(target) {
     var parent  = target.parentNode;
-    var idx     = getNodeIndex(parent); 
+    var idx     = getNodeIndex(parent);
 
     transitionType = 'fadeOut';
-    document.getElementById('itemList').children[idx].className = 'invisible'
+    document.getElementById('itemList').children[idx].className = 'invisible';
   }
 
   function removeFromList(target) {
-    var idx = getNodeIndex(target); 
+    var idx = getNodeIndex(target);
 
     target.parentNode.removeChild(target);
     itemListArr.splice(idx, 1);
@@ -164,7 +164,7 @@
       itemListArr     = [];
 
   //Vanilla JS version of document.ready
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', function() {
     
     EventUtil.addHandler(document.documentElement, transitionEnd, function(event) {
       var target = EventUtil.getTarget(event);
@@ -176,25 +176,25 @@
     });
 
     // Delegates click events on the entire document. We will only consider elements with an ID
-    EventUtil.addHandler(document.documentElement, "click", function(event) {
+    EventUtil.addHandler(document.documentElement, 'click', function(event) {
       var target = EventUtil.getTarget(event);
 
       if (target.id) {
         switch(true){
-          case(target.id=='add_item'):
+          case(target.id==='add_item'):
             addToList(item);
             break;
-          case(target.id=='clearJSON'):
+          case(target.id==='clearJSON'):
             clearList();
             itemListArr = [];
             jsonItems.value = '';
             break;
-          case(target.id=='loadJSON'):
+          case(target.id==='loadJSON'):
             addJSONToList(jsonItems);
             break;
           case(target.id.toLowerCase().indexOf('delete') > -1):
-            fadeOutItem(target); 
-            break
+            fadeOutItem(target);
+            break;
         }
       }
     });
