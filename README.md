@@ -1,5 +1,5 @@
 # TrueCar Test
-Homework Assignment for St. Level Front End Engineer Position
+Homework Assignment for a Sr. Level Front End Engineer Position at TrueCar
 Done without the use of jQuery. Fully responsive.
 
 To view a live version of this app, [click here](http://brandturner.github.io/Test/). Please refer to the code via github and not on github pages as this was my first time using it.
