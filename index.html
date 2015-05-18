@@ -1,1 +1,75 @@
-hello world
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>TrueCar Homework Assignment</title>
+        <meta name="description" content="Yeoman generator">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <meta name="author" content="BrandTurner, Inc.">
+
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="image_src" href="images/default-icons/app-icon.png">
+
+        <meta property="og:title" content="TrueCarTest">
+        <meta property="og:description" content="Yeoman generator">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="images/default-icons/app-icon.png">
+        <meta property="fb:app_id" content="444172322357134">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(app) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="http://truecar.com" target="_blank">
+                    <img src="images/logo.png">
+                </a>
+            </header>
+            <div class="content">
+                <div class="divLeftColumn">
+                     <div class="divControl">
+                            <div class="divLabel">Add Item:</div>
+                            <div class="divInput">
+                                <input type="text" id="addItem"/>
+                                <button id="add_item">Add &#9654;</button>
+                            </div>
+                        </div>
+                        <div class="divControl">
+                            <div class="divLabel">JSON:</div>
+                            <div class="divInput">
+                                <textarea id="addJSON"></textarea>
+                            </div>
+                        </div>
+                        <div class="divControl">
+                            <div class="divInput"><button id="loadJSON">Load JSON</button>&nbsp;<button id="clearJSON">Clear JSON</button></div>
+                        </div>
+                </div>
+                <div class="divRightColumn">
+                    <h4>Items</h4>
+                    <ol id="itemList">
+                        <li>Item 1<a id="delete-0">delete</a></li>
+                        <li>Item 2<a id="delete-1">delete</a></li>
+                        <li>Item 3<a id="delete-2">delete</a></li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+            <script src="scripts/main.js"></script>
+    </body>
+
+
+        <!-- build:js scripts/main.js -->
+    
+        <!-- endbuild -->
+
+</html>
