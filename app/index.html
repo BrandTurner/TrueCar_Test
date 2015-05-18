@@ -29,45 +29,47 @@
         <!-- endbuild -->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <header>
-            <a href="http://truecar.com" target="_blank">
-                <img alt="TrueCar Logo" src="images/logo.png" />
-            </a>
-        </header>
         <main>
-            <div class="mainContainer">
-                <div class="leftColumn">
-                    <div>
-                        <label>Add Item:</label> 
-                        <input type = "text" id="add_item"/>
-                        <button>Add &#9654;</button>
-                    </div>
-                    <div>
-                        <label>JSON:</label>
-                        <textarea id="add_item_textarea"></textarea>
-                    </div>
-                    <div>
-                        <label>&nbsp;</label>
-                        <button>Load JSON</button>
-                    </div>
+            <header>
+                <a href="http://truecar.com" target="_blank">
+                    <img src="images/logo.png">
+                </a>
+            </header>
+            <div class="content">
+                <div class="divLeftColumn">
+                     <div class="divControl">
+                            <div class="divLabel">Add Item:</div>
+                            <div class="divInput">
+                                <input type="text" id="addItem"/>
+                                <button id="add_item">Add &#9654;</button>
+                            </div>
+                        </div>
+                        <div class="divControl">
+                            <div class="divLabel">JSON:</div>
+                            <div class="divInput">
+                                <textarea id="addJSON"></textarea>
+                            </div>
+                        </div>
+                        <div class="divControl">
+                            <div class="divInput"><button id="loadJSON">Load JSON</button>&nbsp;<button id="clearJSON">Clear JSON</button></div>
+                        </div>
                 </div>
-                <div class="rightColumn">
+                <div class="divRightColumn">
                     <h4>Items</h4>
-                    <ol>
-                        <li>Item one <a>delete</a></li> 
-                        <li>Item one <a>delete</a></li> 
-                        <li>Item one <a>delete</a></li> 
+                    <ol id="itemList">
+                        <li>Item 1<a id="delete-0">delete</a></li>
+                        <li>Item 2<a id="delete-1">delete</a></li>
+                        <li>Item 3<a id="delete-2">delete</a></li>
                     </ol>
                 </div>
             </div>
         </main>
+            <script src="scripts/main.js"></script>
+    </body>
 
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
+    
         <!-- endbuild -->
-    </body>
+
 </html>
