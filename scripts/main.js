@@ -1,4 +1,3 @@
-/*global TrueCarTest, window, jQuery*/
 (function () {
   'use strict';
 
